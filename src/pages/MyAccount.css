@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+
+.account {
+  font-family: "Cabin", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  margin-top: 5%;
+}

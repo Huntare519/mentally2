@@ -6,17 +6,15 @@ import "./Content.css";
 function Content(props) {
   return (
     <Container fluid>
-      <Row className="contentHome">
-        <Col className="homeAlign">
-          <h1 className="homeText"> Home</h1>
-        </Col>
-      </Row>
+      <Row className=""></Row>
       <Row>
         <Col className="col-sm-6 ">
           <h1 className="addContactText"> Add Contacts</h1>
         </Col>
         <Col className="col-sm-6 ">
-          <i class="bi bi-plus-circle"></i>
+          <button type="submit" class="btn btn-primary">
+            add contact
+          </button>
         </Col>
       </Row>
     </Container>
