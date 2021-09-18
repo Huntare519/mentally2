@@ -3,13 +3,19 @@ import { useState, useEffect } from "react";
 
 import { Col, Row, Container, Button } from "react-bootstrap";
 import "./Content.css";
+<<<<<<< HEAD
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, firestore } from "../firebaseStuff";
 var nodemailer = require("nodemailer");
+=======
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth, firestore } from '../firebaseStuff'
+>>>>>>> 74eb29ba87bd95e451f78c51591d1e93aa12544f
 
 function Content(props) {
   const [user] = useAuthState(auth);
 
+<<<<<<< HEAD
   let appEmail = "mentally.app.team@gmail.com";
   const [password, setPassword] = useState("");
 
@@ -48,6 +54,8 @@ function Content(props) {
   //   });
   // }
 
+=======
+>>>>>>> 74eb29ba87bd95e451f78c51591d1e93aa12544f
   // auth: (...)
   // displayName: (...)
   // email: (...)
@@ -62,9 +70,18 @@ function Content(props) {
   // tenantId: (...)
   // uid: (...
 
+
   return (
     <Container fluid>
+<<<<<<< HEAD
       <Row className=""></Row>
+=======
+      <Row>
+        <Col className="col-sm-6 ">
+          <h1 className="addContactText"> Welcome Back, {user.displayName}!</h1>
+        </Col>
+      </Row>
+>>>>>>> 74eb29ba87bd95e451f78c51591d1e93aa12544f
       <Row>
         <Col className="col-sm-6 ">
           <h1 className="addContactText"> Add Contacts</h1>
