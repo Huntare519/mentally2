@@ -1,4 +1,6 @@
 import React from "react";
+import {auth, firestore} from '../firebaseStuff.js';
+import firebase from 'firebase/compat/app';
 
 import { Col, Row, Container } from "react-bootstrap";
 
@@ -17,7 +19,7 @@ function Content() {
       </Row>
       <Row>
         <Col>
-          <img class="col-6 img-logo " src={logo} alt="mentally logo"></img>
+          <img className="col-6 img-logo " src={logo} alt="mentally logo"></img>
         </Col>
         <Col class="col-6">
           <h3 className="branding text center"> Mentally </h3>
@@ -25,20 +27,31 @@ function Content() {
       </Row>
       <Row className="row-2">
         <Col className="col-sm-12 col-lg-6 button-align">
-          <button type="button" className="btn btn-light">
-            {" "}
-            login
-          </button>
+          <Login/>
         </Col>
         <Col className="col-sm-12 col-lg-6 button-align">
           <button type="button" className="btn btn-light">
             {" "}
-            sign up
+            resources
           </button>
         </Col>
       </Row>
     </Container>
   );
+}
+
+function Login(props) {
+  const signInWithGoogle = () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider);
+  }
+
+  return (
+    <button type="button" className="btn btn-light" onClick={signInWithGoogle}>
+    {" "}
+    login
+  </button>
+                );
 }
 
 export default Content;
