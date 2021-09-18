@@ -1,36 +1,26 @@
 import React from "react";
-import {auth, firestore} from '../firebaseStuff.js';
-import firebase from 'firebase/compat/app';
+
+import { Col, Row, Container } from "react-bootstrap";
+import "./Content.css";
 
 function Content(props) {
-  
   return (
-    <div>
-      <p className="test"> Content Page</p>
-      {props.user ? <Signout/> : <Login/>}
-      <style>
-      </style>
-    </div>
-    
+    <Container fluid>
+      <Row className="contentHome">
+        <Col className="homeAlign">
+          <h1 className="homeText"> Home</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col className="col-sm-6 ">
+          <h1 className="addContactText"> Add Contacts</h1>
+        </Col>
+        <Col className="col-sm-6 ">
+          <i class="bi bi-plus-circle"></i>
+        </Col>
+      </Row>
+    </Container>
   );
-}
-
-function Login(props) {
-  const signInWithGoogle = () => {
-      const provider = new firebase.auth.GoogleAuthProvider();
-      auth.signInWithPopup(provider);
-  }
-
-  return (
-    <button onClick={signInWithGoogle}>Sign In With Google</button>
-                );
-}
-
-
-function Signout(props) {
-  return auth.currentUser && (
-<button onClick={() => auth.signOut()}>Sign Out</button>
-  )
 }
 
 export default Content;
