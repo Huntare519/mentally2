@@ -1,6 +1,7 @@
 import React from "react";
 import {auth, firestore} from '../firebaseStuff.js';
 import firebase from 'firebase/compat/app';
+import { useHistory } from "react-router-dom";
 
 import { Col, Row, Container } from "react-bootstrap";
 
@@ -10,6 +11,7 @@ import "./Homepage.css";
 import { Button } from "react-bootstrap";
 
 function Content() {
+
   return (
     <Container fluid>
       <Row className="first-row">
@@ -41,9 +43,13 @@ function Content() {
 }
 
 function Login(props) {
+  let history = useHistory();
   const signInWithGoogle = () => {
       const provider = new firebase.auth.GoogleAuthProvider();
-      auth.signInWithPopup(provider);
+      auth.signInWithPopup(provider).then(() => {
+        history.push('/content');
+      });
+     
   }
 
   return (
