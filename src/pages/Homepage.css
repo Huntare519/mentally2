@@ -2,4 +2,34 @@
 
 .branding {
   font-family: "Cabin", sans-serif;
+  color: #ff3b3f;
+  font-size: 48px;
+  font-weight: bold;
+  padding: 0px;
+}
+
+.img-logo {
+  height: 100px;
+  width: 100px;
+  margin-left: 25px;
+}
+
+.first-row {
+  height: 300px;
+}
+
+.button-align {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.row-2 {
+  margin-top: 50px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex: auto;
 }
