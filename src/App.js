@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 //pages
 import Content from "./pages/Content";
 import Homepage from "./pages/Homepage";
+import MyAccount from "./pages/MyAccount";
 
 // Import the functions you need from the SDKs you need
 //import { initializeApp } from "firebase/app";
@@ -26,19 +27,17 @@ import {auth, firestore} from './firebaseStuff'
 // // Initialize Firebase
 // const app = initializeApp(firebaseConfig);
 
-
 function App() {
-
   const [user] = useAuthState(auth);
 
   return (
     <div className="">
       <Router>
         <Route path="/" exact render={() => <Homepage />} />
-        <Route path="/login" render={() => <Content user={user}/>} />
-        <Route path="/signup" render={() => <Content user={user}/>} />
-        <Route path="/content" render={() => <Content user={user}/>} />
-        <Route path="/myaccount" render={() => <Content user={user}/>} />
+        <Route path="/login" render={() => <Content user={user} />} />
+        <Route path="/signup" render={() => <Content user={user} />} />
+        <Route path="/content" render={() => <Content user={user} />} />
+        <Route path="/myaccount" render={() => <MyAccount user={user} />} />
       </Router>
     </div>
   );
