@@ -5,50 +5,10 @@ import { Col, Row, Container, Button } from "react-bootstrap";
 import "./Content.css";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth, firestore } from '../firebaseStuff'
-var nodemailer = require('nodemailer');
 
 function Content(props) {
 
   const [user] = useAuthState(auth);
-
-  let appEmail = 'mentally.app.team@gmail.com';
-  const [password, setPassword] = useState('');
-
-  // useEffect(() => {
-  //   firestore.collection('superSecretPassword').onSnapshot((snapshot) => {
-  //     const password = snapshot.docs.sort().map((doc) => ({
-  //       id: doc.id,
-  //       ...doc.data()
-  //     }));
-  //     setPassword(password[0].password);
-  //   })
-  // }, []);
-
-  // var transporter = nodemailer.createTransport({
-  //   service: 'gmail',
-  //   auth: {
-  //     user: appEmail,
-  //     pass: password
-  //   }
-  // });
-
-  // var mailOptions = {
-  //   from: appEmail,
-  //   to: 'bconradt@wisc.edu',
-  //   subject: 'Sending Email using Node.js',
-  //   text: 'That was easy!'
-  // };
-
-  // function sendEmail() {
-  //   transporter.sendMail(mailOptions, function (error, info) {
-  //     if (error) {
-  //       console.log(error);
-  //     } else {
-  //       console.log('Email sent: ' + info.response);
-  //     }
-  //   });
-  // }
-  
 
   // auth: (...)
   // displayName: (...)
@@ -63,6 +23,7 @@ function Content(props) {
   // refreshToken: (...)
   // tenantId: (...)
   // uid: (...
+
 
   return (
     <Container fluid>
