@@ -3,10 +3,7 @@ import {auth, firestore} from '../firebaseStuff.js';
 import firebase from 'firebase/compat/app';
 
 function Content(props) {
-
   
-
-
   return (
     <div>
       <p className="test"> Content Page</p>
