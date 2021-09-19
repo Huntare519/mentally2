@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+
+.account {
+  font-family: "Cabin", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  margin-top: 5%;
+}
+
+.my-picture {
+  border-radius: 50%; 
+  width: 86px;
+  height: 86px;
+  float: left;
+  display : block; 
+}
+
+.col-3 {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+#id {
+  padding: 100px;
+}
+
+.background {
+  background-color: #CAEBF2;
+  width: 307px;
+  height: 555px;
+  float: center;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.emailicon {
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 50px;
+  float: left;
+  margin: 0;
+}
+
+.myemail {
+  width: 100px;
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.email {
+  display: flex;
+}
+
+.join {
+  display:flex;
+}
+
+.calendaricon {
+  width: 48px;
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.joindate {
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.photo {
+  background-color: #C4C4C4;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height : 54px;
+  width: 190px;
+}
+
+.lucky {
+  background-color: #C4C4C4;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height : 54px;
+  width: 190px;
+}
+
+.about {
+  background-color: #C4C4C4;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height : 54px;
+  width: 190px;
+}
+
+.buttons {
+  padding-top: 200px;
+}
+
+.buttons2 {
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.bottom {
+  display: flex;
+  padding-top: 60px;
+  padding-left: 20px;
+}
+
+.homebutton {
+  background-color: #CAEBF2;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height : 25px;
+  width: 100px;
+}
+
+.signoutbutton {
+  background-color: #CAEBF2;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height : 25px;
+  width: 100px;
+}
+
+.signout {
+  padding-left: 90px;
+}
