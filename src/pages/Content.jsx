@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
@@ -45,10 +45,10 @@ function Content(props) {
   const handleShow = () => setShow(true);
 
   let profilePic = null;
-  if (props.user.photoURL == null) {
+  if (!user) {
     profilePic =
       "https://images.unsplash.com/photo-1541958409-7618fd1ad26e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2848&q=80";
-  } else {
+  } else if (user) {
     profilePic = props.user.photoURL;
   }
 
@@ -60,7 +60,7 @@ function Content(props) {
         </Col>
         <Col className="col-4"></Col>
         <Col className="col-4">
-          <img className="profile1" src={profilePic}></img>
+          <img className="profile1" src={img2}></img>
         </Col>
       </Row>
       <Row className="content-row">
@@ -84,14 +84,14 @@ function Content(props) {
       </Row>
       <Row>
         <NavLink to="/checkin">
-          <button type="button" class="btn new-color contacts-align">
+          <button type="button" class="btn new-color checkin-align">
             Go To Check In
           </button>
         </NavLink>
       </Row>
       <Row>
         <NavLink to="/myaccount">
-          <button type="button" class="btn new-color contacts-align">
+          <button type="button" class="btn new-color account-align">
             Go To My Account
           </button>
         </NavLink>

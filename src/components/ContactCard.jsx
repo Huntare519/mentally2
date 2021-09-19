@@ -18,22 +18,24 @@ function ContactCard(props) {
 
 function Contacts({ name, image, email }) {
   return (
-    <div className="card-container">
-      <div className="image-container">
-        <img className="profile" src={image} />
+    <div className="background">
+      <div className="card-container">
+        <div className="image-container">
+          <img className="profile" src={image} />
+        </div>
+        <div className="body-container">
+          <div className="name">{name}</div>
+          <p className="body-text">
+            Email Address: {email}
+            <br></br>
+            Emergency Contact:
+            <br />
+            Message:
+            <br />
+          </p>
+        </div>
+        <br className="break" />
       </div>
-      <div className="body-container">
-        <div className="name">{name}</div>
-        <p className="body-text">
-          Email Address: {email}
-          <br></br>
-          Emergency Contact:
-          <br />
-          Message:
-          <br />
-        </p>
-      </div>
-      <br className="break" />
     </div>
   );
 }
