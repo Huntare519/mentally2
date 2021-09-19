@@ -17,6 +17,17 @@ function addCard(formBasicName, formBasicEmail, formBasicPhoto, formBasicText) {
   console.log(formBasicEmail);
   console.log(formBasicPhoto);
   console.log(formBasicText);
+
+  return (
+    <Row>
+      <ContactCard
+        name={formBasicName}
+        email={formBasicEmail}
+        photo={formBasicPhoto}
+        text={formBasicText}
+      />
+    </Row>
+  );
 }
 
 function Content(props) {
@@ -28,15 +39,20 @@ function Content(props) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  let profilePic = null;
 
-  let profilePic =
-    "https://images.unsplash.com/photo-1541958409-7618fd1ad26e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2848&q=80";
+  if (props.user.photoURL == null) {
+    profilePic =
+      "https://images.unsplash.com/photo-1541958409-7618fd1ad26e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2848&q=80";
+  } else {
+    profilePic = props.user.photoURL;
+  }
 
   return (
     <Container fluid>
       <Row className="content-row">
-        <Col className="col-4 home align-center">
-          <h3> Home</h3>
+        <Col className="col-4 align-center content-home">
+          <h3 className="home-text"> Home</h3>
         </Col>
         <Col className="col-4"></Col>
         <Col className="col-4">
@@ -58,7 +74,7 @@ function Content(props) {
         </Col>
       </Row>
       <Row>
-        <ContactCard />
+        <ContactCard name="hunter goff" email="hfgoff@wisc.edu" />
       </Row>
 
       <Modal show={show} onHide={handleClose}>
@@ -107,7 +123,7 @@ function Content(props) {
                   document.getElementById("formBasicPhoto").value,
                   document.getElementById("formBasicText").value,
                   () => {
-                    console.log("success!");
+                    //console.log("success!");
                   }
                 )
               }
