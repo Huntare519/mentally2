@@ -7,10 +7,29 @@
   justify-content: center;
 }
 
+.branding2 {
+  font-family: "Cabin", sans-serif;
+  color: #ff3b3f;
+  font-size: 48px;
+  font-weight: bold;
+  padding: 0px;
+  margin-left: 8px;
+}
+
 .homeText {
   font-family: "Cabin", sans-serif;
   font-weight: 400;
   font-size: 36px;
+}
+
+.img-logo2 {
+  height: 30px;
+  width: 32px;
+  margin-top: 13px;
+}
+
+.flex-logo{
+  display: flex;
 }
 
 .addContactText {
@@ -56,4 +75,17 @@
   float: left;
   display: block;
   margin: 10%;
+}
+
+.signout-button{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.profile-pic{
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin-left: 100px;
 }

@@ -1,3 +1,11 @@
+# Mentally
+
+Check out the figma we used to plan the app here: https://www.figma.com/proto/Y2GpypPtGbon3K0uEavYPE/Mentally?node-id=1%3A11&scaling=scale-down&page-id=0%3A1
+
+Our goal is to foster healthy relationships between friends, putting mental health checks at the forefront. This app checks in with users every day, and if users are not responsive to check-in with the app, notifications are sent at random to their friend contacts to check in with them. Users can also reach out to friends manually to connect with them through an email system in the app. As an added feature, users can check out mental health resources on a landing page without having to sign in. We hope you enjoy using Mentally!
+
+A live demo can be found at: https://mentally-ee47e.web.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -20,9 +20,9 @@ function Content() {
       </Row>
       <Row>
         <Col>
-          <img className="col-6 img-logo " src={logo} alt="mentally logo"></img>
+          <img className="col-6 img-logo" src={logo} alt="mentally logo"></img>
         </Col>
-        <Col class="col-6">
+        <Col class="col-6 ">
           <h3 className="branding text center"> Mentally </h3>
         </Col>
       </Row>
@@ -37,6 +37,9 @@ function Content() {
           </button>
         </Col>
       </Row>
+      <p className="bottom-text ">
+        made with <HeartFill color="#FF3B3F" /> for HackMIT
+      </p>
     </Container>
   );
 }

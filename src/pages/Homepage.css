@@ -9,9 +9,9 @@
 }
 
 .img-logo {
-  height: 100px;
-  width: 100px;
-  margin-left: 25px;
+  height: 60px;
+  width: 75px;
+  margin-left: 40px;
 }
 
 .first-row {
@@ -26,6 +26,12 @@
 
 .row-2 {
   margin-top: 50px;
+}
+
+.bottom-text{
+  position: fixed;
+  bottom: 20px;
+  right: 90px;
 }
 
 .buttons {

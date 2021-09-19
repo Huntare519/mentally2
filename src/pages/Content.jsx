@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 import { Col, Row, Container, Button } from "react-bootstrap";
 import "./Content.css";
@@ -142,6 +143,42 @@ function Content(props) {
         </Modal.Footer>
       </Modal>
     </Container>
+  );
+}
+
+function Signout(props) {
+  let history = useHistory();
+
+  return (
+    auth.currentUser && (
+      <Button
+        className="btn-info signout-button"
+        onClick={() => {
+          auth.signOut();
+          history.push("/");
+        }}
+      >
+        Sign Out
+      </Button>
+    )
+  );
+}
+
+function Signout2(props) {
+  let history = useHistory();
+
+  return (
+    auth.currentUser && (
+      <img
+        className="img-logo2"
+        src={logo}
+        alt="mentally logo"
+        onClick={() => {
+          auth.signOut();
+          history.push("/");
+        }}
+      />
+    )
   );
 }
 
