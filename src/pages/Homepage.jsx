@@ -48,7 +48,7 @@ function Login(props) {
       const provider = new firebase.auth.GoogleAuthProvider();
       auth.signInWithPopup(provider).then(() => {
         history.push('/content');
-      });
+      }).catch(err => console.log(err));
      
   }
 

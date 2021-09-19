@@ -1,5 +1,12 @@
 var nodemailer = require('nodemailer');
 const functions = require('firebase-functions');
+const express = require('express');
+const bodyParser = require('body-parser');
+var cors = require('cors')
+
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors({origin: 'https://mentally-ee47e.web.app/'}));
 
 // The Firebase Admin SDK to access Firestore.
 const admin = require('firebase-admin');
@@ -25,18 +32,17 @@ exports.addMessage = functions.https.onRequest(async (req, res) => {
 
 exports.sendEmail = functions.https.onRequest(async (req, res) => {
 
+    res.set('Access-Control-Allow-Origin', '*');
+
     let appEmail = 'mentally.app.team@gmail.com';
     let emailPassword = 'PandaHacks2021';
 
-    //const message = req.query.text;
+    //let body = req.body;
+    // const contactEmail = body.email;
+    // const name = body.name;
 
-    // const passwordResult = await admin.firestore.collection('superSecretPassword').onSnapshot((snapshot) => {
-    //     const password = snapshot.docs.sort().map((doc) => ({
-    //         id: doc.id,
-    //         ...doc.data()
-    //     }));
-    //     emailPassword = password[0].password;
-    // })
+    const contactEmail = req.query.email ? req.query.email : 'bconradt@wisc.edu';
+    const name = req.query.name ? req.query.name : 'Bailey';
 
     var transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -48,9 +54,9 @@ exports.sendEmail = functions.https.onRequest(async (req, res) => {
 
     var mailOptions = {
         from: appEmail,
-        to: 'bconradt@wisc.edu',
-        subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
+        to: contactEmail,
+        subject: 'Just checking in',
+        text: 'Hey ' + name + ', \n\nJust checking in to see how you\'re doing. Feel free to email me back when you get a chance! <3'
     };
 
     function sendEmail() {
