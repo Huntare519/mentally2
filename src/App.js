@@ -7,6 +7,7 @@ import Content from "./pages/Content";
 import Homepage from "./pages/Homepage";
 import MyAccount from "./pages/MyAccount";
 import Checkin from "./pages/Checkin";
+import Resources from "./pages/Resources";
 
 // Import the functions you need from the SDKs you need
 //import { initializeApp } from "firebase/app";

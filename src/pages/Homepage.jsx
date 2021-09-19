@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import { Col, Row, Container } from "react-bootstrap";
 
 import logo from "../assets/mentally_logo.png";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import "./Homepage.css";
 
 import { Button } from "react-bootstrap";
@@ -30,15 +31,17 @@ function Content() {
         <Col className="col-sm-12 col-lg-6 button-align">
           <Login />
         </Col>
-        <Col className="col-sm-12 col-lg-6 button-align">
-          <button type="button" className="btn button-color">
-            {" "}
-            resources
-          </button>
-        </Col>
+        <NavLink to="/resources" style={{ textDecoration: "none" }}>
+          <Col className="col-sm-12 col-lg-6 button-align">
+            <button type="button" className="btn button-color">
+              {" "}
+              resources
+            </button>
+          </Col>
+        </NavLink>
       </Row>
       <p className="bottom-text ">
-        made with <HeartFill color="#FF3B3F" /> for HackMIT
+        made with <i className="bi bi-heart-fill"></i> for HackMIT
       </p>
     </Container>
   );

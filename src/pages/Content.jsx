@@ -11,6 +11,8 @@ import { Modal } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { render } from "@testing-library/react";
 
+import img2 from "../assets/mentally_logo.png";
+
 var nodemailer = require("nodemailer");
 
 function addCard(formBasicName, formBasicEmail, formBasicPhoto, formBasicText) {
@@ -40,8 +42,8 @@ function Content(props) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  let profilePic = null;
 
+  let profilePic = null;
   if (props.user.photoURL == null) {
     profilePic =
       "https://images.unsplash.com/photo-1541958409-7618fd1ad26e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2848&q=80";
@@ -171,7 +173,7 @@ function Signout2(props) {
     auth.currentUser && (
       <img
         className="img-logo2"
-        src={logo}
+        src={img2}
         alt="mentally logo"
         onClick={() => {
           auth.signOut();
