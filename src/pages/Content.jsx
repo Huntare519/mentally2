@@ -10,6 +10,7 @@ import ContactCard from "../components/ContactCard";
 import { Modal } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { render } from "@testing-library/react";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 import img2 from "../assets/mentally_logo.png";
 
@@ -76,8 +77,24 @@ function Content(props) {
           </button>
         </Col>
       </Row>
+      <Row className="row-with-card">
+        <Col className="col-12">
+          <ContactCard name="hunter goff" email="hfgoff@wisc.edu" />
+        </Col>
+      </Row>
       <Row>
-        <ContactCard name="hunter goff" email="hfgoff@wisc.edu" />
+        <NavLink to="/checkin">
+          <button type="button" class="btn new-color contacts-align">
+            Go To Check In
+          </button>
+        </NavLink>
+      </Row>
+      <Row>
+        <NavLink to="/myaccount">
+          <button type="button" class="btn new-color contacts-align">
+            Go To My Account
+          </button>
+        </NavLink>
       </Row>
 
       <Modal show={show} onHide={handleClose}>

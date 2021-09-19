@@ -28,7 +28,7 @@
   margin-top: 13px;
 }
 
-.flex-logo{
+.flex-logo {
   display: flex;
 }
 
@@ -77,15 +77,29 @@
   margin: 10%;
 }
 
-.signout-button{
+.signout-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
 }
 
-.profile-pic{
+.profile-pic {
   border-radius: 50%;
   height: 60px;
   width: 60px;
   margin-left: 100px;
+}
+
+.contacts-align {
+  width: 100%;
+  height: 100%;
+}
+
+.new-color {
+  background-color: #caebf2 !important;
+}
+
+.row-with-card {
+  display: flex;
+  height: 500px;
 }

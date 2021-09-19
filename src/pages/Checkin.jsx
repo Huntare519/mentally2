@@ -54,7 +54,7 @@ function Checkin() {
       </Row>
       <Row className="row-2">
         <Col className="col-sm-12 col-lg-6 contacts-align">
-          <NavLink to="/#">
+          <NavLink to="/resources">
             <button type="button" class="btn new-color contacts-align">
               Mental Health Resources
             </button>

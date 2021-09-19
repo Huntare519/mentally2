@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 //pages
 import Content from "./pages/Content";
 import Homepage from "./pages/Homepage";
-import MyAccount from "./pages/MyAccount";
+import MyAccount from "./pages/MyAccount2";
 import Checkin from "./pages/Checkin";
 import Resources from "./pages/Resources";
 
