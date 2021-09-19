@@ -6,3 +6,12 @@
   font-size: 36px;
   margin-top: 5%;
 }
+
+.branding3 {
+  font-family: "Cabin", sans-serif;
+  color: #ff3b3f;
+  font-size: 48px;
+  font-weight: bold;
+  padding: 0px;
+  margin-left: 5px;
+}

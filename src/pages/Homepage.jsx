@@ -8,10 +8,10 @@ import { Col, Row, Container } from "react-bootstrap";
 import logo from "../assets/mentally_logo.png";
 import "./Homepage.css";
 
-import { Button } from "react-bootstrap";
+import { HeartFill } from 'react-bootstrap-icons';
 
-function Content() {
-
+function Content(props) {
+  let history = useHistory();
   return (
     <Container fluid>
       <Row className="first-row">
@@ -20,10 +20,10 @@ function Content() {
         </Col>
       </Row>
       <Row>
-        <Col>
-          <img className="col-6 img-logo " src={logo} alt="mentally logo"></img>
+        <Col >
+          <img className="col-6 img-logo" src={logo} alt="mentally logo"></img>
         </Col>
-        <Col class="col-6">
+        <Col class="col-6 ">
           <h3 className="branding text center"> Mentally </h3>
         </Col>
       </Row>
@@ -32,12 +32,13 @@ function Content() {
           <Login/>
         </Col>
         <Col className="col-sm-12 col-lg-6 button-align">
-          <button type="button" className="btn btn-light">
+          <button type="button" className="btn btn-info" onClick={e => {history.push('/resources')}}>
             {" "}
             resources
           </button>
         </Col>
       </Row>
+      <p className="bottom-text ">made with <HeartFill color="#FF3B3F"/> for HackMIT</p>
     </Container>
   );
 }
@@ -49,15 +50,15 @@ function Login(props) {
       auth.signInWithPopup(provider).then(() => {
         history.push('/content');
       }).catch(err => console.log(err));
-     
   }
-
   return (
-    <button type="button" className="btn btn-light" onClick={signInWithGoogle}>
+    <button type="button" className="btn btn-info" onClick={signInWithGoogle}>
     {" "}
     login
   </button>
                 );
 }
+
+
 
 export default Content;
