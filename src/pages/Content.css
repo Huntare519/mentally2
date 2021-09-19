@@ -18,4 +18,41 @@
   font-weight: 400;
   font-size: 25px;
   margin: 5%;
+  margin-top: 65px;
+}
+
+.home {
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.plus-button {
+  background-color: #caebf2 !important;
+  margin: 20px;
+  margin-top: 70%;
+}
+
+.plus-size {
+  width: 100px;
+  height: 100px;
+}
+
+.content-row {
+  height: 90px;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile1 {
+  border-radius: 50%;
+  width: 86px;
+  height: 86px;
+  float: left;
+  display: block;
+  margin: 10%;
 }

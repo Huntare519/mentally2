@@ -6,11 +6,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Content from "./pages/Content";
 import Homepage from "./pages/Homepage";
 import MyAccount from "./pages/MyAccount";
+import Checkin from "./pages/Checkin";
 
 // Import the functions you need from the SDKs you need
 //import { initializeApp } from "firebase/app";
-import {useAuthState} from 'react-firebase-hooks/auth';
-import {auth, firestore} from './firebaseStuff'
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth, firestore } from "./firebaseStuff";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -35,6 +36,7 @@ function App() {
       <Router>
         <Route path="/" exact render={() => <Homepage />} />
         <Route path="/login" render={() => <Content user={user} />} />
+        <Route path="/checkin" render={() => <Checkin user={user} />} />
         <Route path="/signup" render={() => <Content user={user} />} />
         <Route path="/content" render={() => <Content user={user} />} />
         <Route path="/myaccount" render={() => <MyAccount user={user} />} />

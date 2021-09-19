@@ -1,6 +1,6 @@
 import React from "react";
-import {auth, firestore} from '../firebaseStuff.js';
-import firebase from 'firebase/compat/app';
+import { auth, firestore } from "../firebaseStuff.js";
+import firebase from "firebase/compat/app";
 import { useHistory } from "react-router-dom";
 
 import { Col, Row, Container } from "react-bootstrap";
@@ -11,7 +11,6 @@ import "./Homepage.css";
 import { Button } from "react-bootstrap";
 
 function Content() {
-
   return (
     <Container fluid>
       <Row className="first-row">
@@ -29,10 +28,10 @@ function Content() {
       </Row>
       <Row className="row-2">
         <Col className="col-sm-12 col-lg-6 button-align">
-          <Login/>
+          <Login />
         </Col>
         <Col className="col-sm-12 col-lg-6 button-align">
-          <button type="button" className="btn btn-light">
+          <button type="button" className="btn button-color">
             {" "}
             resources
           </button>
@@ -45,19 +44,22 @@ function Content() {
 function Login(props) {
   let history = useHistory();
   const signInWithGoogle = () => {
-      const provider = new firebase.auth.GoogleAuthProvider();
-      auth.signInWithPopup(provider).then(() => {
-        history.push('/content');
-      });
-     
-  }
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider).then(() => {
+      history.push("/content");
+    });
+  };
 
   return (
-    <button type="button" className="btn btn-light" onClick={signInWithGoogle}>
-    {" "}
-    login
-  </button>
-                );
+    <button
+      type="button"
+      className="btn button-color"
+      onClick={signInWithGoogle}
+    >
+      {" "}
+      login
+    </button>
+  );
 }
 
 export default Content;

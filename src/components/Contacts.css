@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+
+.card-container {
+  overflow: hidden;
+  position: absolute;
+  width: 237px;
+  height: 86px;
+  left: 40px;
+  top: 259px;
+  text-align: left;
+  display: flex;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 86px;
+  height: 86px;
+  float: left;
+  display: block;
+}
+
+.name {
+  font-size: 24px;
+  font-family: "cabin", sans-serif;
+}
+.body-text {
+  font-size: 12px;
+  margin: 0;
+  font-family: "cabin", sans-serif;
+}
+
+.image-container {
+  height: 86px;
+  width: 86px;
+}
+
+.body-container {
+  height: 86px;
+  width: 151px;
+  margin-left: 7px;
+}
+
+.body-container,
+.image-container {
+  flex-direction: row;
+}
+
+.break {
+  clear: both;
+}

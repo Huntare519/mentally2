@@ -33,3 +33,7 @@
   justify-content: center;
   flex: auto;
 }
+
+.button-color {
+  background-color: #caebf2 !important;
+}
